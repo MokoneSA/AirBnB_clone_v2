@@ -7,7 +7,7 @@ class FileStorage:
     """This class manages storage of hbnb models in JSON format"""
     __file_path = 'file.json'
     __objects = {}
-    
+
     def __init__(self):
         """Initializes a FileStorage instance"""
         self.model_classes = {
@@ -19,7 +19,6 @@ class FileStorage:
             'Place': import_module('models.place').Place,
             'Review': import_module('models.review').Review
         }
-
 
     def all(self, cls=None):
         """Returns a dictionary of models currently in storage"""
